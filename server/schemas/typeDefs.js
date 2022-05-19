@@ -25,6 +25,18 @@ const typeDefs = gql`
     email: String
     orders: [Order]
   }
+  type Auth {
+    token: ID
+    user: User
+  }
+  type Query {
+    categories: [Category]
+    products(category: ID, name: String): [Product]
+    product(_id: ID!): Product
+    user: User
+    order(_id: ID!) Order
+    checkout(products: [ID]!): Checkout
+  }
 `;
 
 module.exports = typeDefs;
