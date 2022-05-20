@@ -1,43 +1,43 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
-const Order = require('./Order');
 const bcrypt = require('bcrypt');
-const saltRounds = 10;
+const Order = require('./Order');
 
 const userSchema = new Schema({
-    firstName: { 
-        type: String,
-        required: true,
-        trim: true
-    },
-    lastName: { 
-        type: String,
-        requried: true,
-        trim: true
-    },
-    email: {
-        type: String,
-        requried: true,
-        unique: true
-    },
-    password: {
-        type: String,
-        requrired: true,
-        minLength: 8
-    },
-    orders: [Order.schema]
+  firstName: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  lastName: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true
+  },
+  password: {
+    type: String,
+    required: true,
+    minlength: 5
+  },
+  orders: [Order.schema]
 });
 
 userSchema.pre('save', async function(next) {
-    if (this.isNew || this.isModified('password')) {
-        this.password = await bcrypt.hash(this.password, saltRounds);
-    }
+  if (this.isNew || this.isModified('password')) {
+    const saltRounds = 10;
+    this.password = await bcrypt.hash(this.password, saltRounds);
+  }
 
-    next();
+  next();
 });
 
-userSchema.methods.isCorrect = async function(password) {
-    return await bcrypt.compare(password, this.password);
+userSchema.methods.isCorrectPassword = async function(password) {
+  return await bcrypt.compare(password, this.password);
 };
 const User = mongoose.model('User', userSchema);
 
