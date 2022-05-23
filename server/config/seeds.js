@@ -1,4 +1,4 @@
-const db = require('./connection');
+const db = require('../config/connection');
 const { User, Product, Category } = require('../models');
 
 db.once('open', async () => {
@@ -15,13 +15,13 @@ db.once('open', async () => {
   
     const products = await Product.insertMany([
       {
-        name: 'MESSENGER TEE',
-        description:
-          'Sending our message around the world. Travel, have fun and enjoy life 🤙 100% cotton, Oversize Fit, Crew neck',
-        image: 'MESSENGER-TEE.jpg',
+        name: 'BELLS CLASSIC HOODIE',
         category: categories[0]._id,
-        price: 39.95,
-        quantity: 200
+        description:
+          'Our SHUKS Classics have been created with style and epic comfort in mind and are named after the most iconic Aussie beaches. Regular fit, Pull over hood, with draw-cord, Kangaroo pocket, Pre-shrunk to minimise shrinkage, 80% cotton, 20% polyester anti-pill fleece ',
+        image: 'BELLS-CLASSIC-HOODIE.jpg',
+        price: 79.95,
+        quantity: 100
       },
       {
         name: 'GVC',
@@ -113,11 +113,11 @@ db.once('open', async () => {
         quantity: 100
       },
       {
-        name: 'BYRON CLASSIC LONG SLEEVE TEE',
-        category: categories[0]._id,
+        name: 'MESSENGER TEE',
         description:
-          'Our SHUKS Classics have been created with style and epic comfort in mind and are named after the most iconic Aussie beaches. 100% Cotton, Longer Body, Cuffed sleeves, Slight Drop at back, Pre Shrunk to minimise shrinkage',
-        image: 'BYRON-CLASSIC-LONG-SLEEVE-TEE.jpg',
+          'Sending our message around the world. Travel, have fun and enjoy life 🤙 100% cotton, Oversize Fit, Crew neck',
+        image: 'MESSENGER-TEE.jpg',
+        category: categories[0]._id,
         price: 39.95,
         quantity: 200
       }
