@@ -126,7 +126,7 @@ const resolvers = {
       const user = await User.findOne({ email });
 
       if (!user) {
-        throw new AuthenticationError('This email or password is incorrect');
+        throw new AuthenticationError('This email or password is incorrect.');
       }
 
       const correctPw = await user.isCorrectPassword(password);

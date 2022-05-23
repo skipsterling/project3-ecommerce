@@ -18,7 +18,7 @@ db.once('open', async () => {
         name: 'BELLS CLASSIC HOODIE',
         category: categories[0]._id,
         description:
-          'Our SHUKS Classics have been created with style and epic comfort in mind and are named after the most iconic Aussie beaches. Regular fit, Pull over hood, with draw-cord, Kangaroo pocket, Pre-shrunk to minimise shrinkage, 80% cotton, 20% polyester anti-pill fleece ',
+          'Our SHUKS Classics have been created with style and epic comfort in mind and are named after the most iconic Aussie beaches. Regular fit, Pull over hood, with draw-cord, Kangaroo pocket, Pre-shrunk to minimise shrinkage, 80% cotton, 20% polyester anti-pill fleece. ',
         image: 'BELLS-CLASSIC-HOODIE.jpg',
         price: 79.95,
         quantity: 100
