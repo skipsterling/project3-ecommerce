@@ -1,3 +1,4 @@
+// This page will show our prior purchaces.
 import React from 'react';
 import { Link } from 'react-router-dom';
 
