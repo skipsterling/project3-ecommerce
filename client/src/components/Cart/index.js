@@ -11,7 +11,7 @@ import { useLazyQuery } from '@apollo/client';
 import { useSelector, useDispatch } from 'react-redux'
 
 
-const stripePromise = loadStripe('sk_test_51L10skFcX4c4Cq5QpUH2kP38nQcH4LGjFFRa9SMRtPlI9fw9XPyXnnblz3kuh8UQ97Khc9uMMqFehuch180hX8Rh00tVhVtSnY');
+const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 
 
 const Cart = () => {
@@ -101,12 +101,12 @@ const Cart = () => {
           </div>
         </div>
       ) : (
-        <h3>
-          <span role="img" aria-label="Shopping cart">
+        <h4>
+         <span role="img" aria-label="Shopping cart">
             🛒
           </span>
           You haven't added anything to your cart yet!
-        </h3>
+        </h4>
       )}
     </div>
   );

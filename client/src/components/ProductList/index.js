@@ -32,9 +32,9 @@ function ProductList() {
       });
       // add else if to check if `loading` is undefined in `useQuery()` Hook
     } else if (!loading) {
-      // since we're offline, get all of the data from the `products` store
+     
       idbPromise('products', 'get').then((products) => {
-        // This should use retrieved data to set global state for offline browsing
+        // use retrieved data to set global state for offline browsing
         dispatch({
           type: UPDATE_PRODUCTS,
           products: products
@@ -68,7 +68,7 @@ function ProductList() {
             ))}
         </div>
       ) : (
-        <h3>Your cart is empty.</h3>
+        <h3>You haven't added any products yet!</h3>
       )}
       { loading ? 
       <img src={spinner} alt="loading" />: null}

@@ -6,7 +6,7 @@ class AuthService {
   }
 
   loggedIn() {
-    // This will check for a saved token and also see if it's valid
+    // This will check for a saved token and it's valid
     const token = this.getToken();
     return !!token && !this.isTokenExpired(token);
   }

@@ -40,7 +40,7 @@ function Success() {
           Thank you for your purchase!
         </h2>
         <h2>
-          Please wait to be directed to the home page.
+        Please wait to be directed to the home page.
         </h2>
       </Jumbotron>
     </div>

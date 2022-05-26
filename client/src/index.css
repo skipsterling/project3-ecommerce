@@ -124,6 +124,7 @@ img {
 
 span[role="img"] {
   cursor: default;
+  color: black;
 }
 
 form {
@@ -222,6 +223,27 @@ video {
 
 .error-text {
   color: var(--error);
+}
+
+.cart {
+  color: black;
+  font-family: 'Roboto Flex', sans-serif;
+}
+
+.aboutHeading {
+  text-align: center;
+  text-decoration: underline;
+  padding: 1rem;
+}
+
+.aboutDescription {
+  text-align: center;
+  justify-content: space-between;
+}
+
+.aboutLink {
+  color: tan;
+  font-family: 'Abril Fatface', cursive;
 }
 
 @media screen and (max-width: 768px) {

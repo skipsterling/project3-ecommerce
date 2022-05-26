@@ -9,6 +9,7 @@ import {
 import { setContext } from '@apollo/client/link/context';
 
 import Home from './pages/Home';
+import About from'./pages/About';
 import Shop from './pages/Shop';
 import Detail from './pages/Detail';
 import NoMatch from './pages/NoMatch';
@@ -16,7 +17,6 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Nav from './components/Nav';
 import Success from './pages/Success';
-import OrderHistory from './pages/OrderHistory';
 import store from './app/store'
 import { Provider } from 'react-redux'
 
@@ -49,9 +49,9 @@ function App() {
               <Switch>
                 <Route exact path="/" component={Home} />
                 <Route exact path="/shop" component={Shop} />
+                <Route exact path="/about" component={About} />
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/signup" component={Signup} />
-                <Route exact path="/orderHistory" component={OrderHistory} />
                 <Route exact path="/products/:id" component={Detail} />
                 <Route exact path="/success" component={Success} />
                 <Route component={NoMatch} />

@@ -20,7 +20,7 @@ function CategoryMenu() {
   const { loading, data: categoryData } = useQuery(QUERY_CATEGORIES);
 
   useEffect(() => {
-    // if categoryData exists or has changed from the response of useQuery, then run dispatch() and execute dispatch function with our action object indicating the type of action and the data to set our state for categories
+    // if categoryData exists or has changed from the response of useQuery, then run dispatch()
     if (categoryData) {
       dispatch({
         type: UPDATE_CATEGORIES,
@@ -49,7 +49,7 @@ function CategoryMenu() {
 
   return (
     <div>
-      <h2>Choose a Category:</h2>
+      
       {categories.map(item => (
         <button
           key={item._id}

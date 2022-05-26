@@ -16,8 +16,8 @@ function Nav() {
           </li>
 
           <li className="mx-1">
-            <Link to="/orderHistory">
-              Order History
+            <Link to="/about">
+              About
             </Link>
           </li>
           <li className="mx-1">
