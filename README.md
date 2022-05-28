@@ -9,7 +9,7 @@
 
 ## Description
 This application is a mock eccommerce site that sells apparel and accessiores.
-I have created this as an example of how I can use the MERN stack to create a functional website. <a href="">SHUKS INDUSTRIES</a> This application has been made as a mobile first application however it has a responsive design so it can be used on any device.
+I have created this as an example of how I can use the MERN stack to create a functional website. <a href="https://stark-sierra-95857.herokuapp.com/">SHUKS INDUSTRIES</a> This application has been made as a mobile first application however it has a responsive design so it can be used on any device.
  
 ## Technologies
 - MongoDB
@@ -18,6 +18,9 @@ I have created this as an example of how I can use the MERN stack to create a fu
 - Node.js
 - Stripes
 - Redux 
+- Mongoose 
+- GraphQL
+- JWT authentication
 
 
 ## Usage
