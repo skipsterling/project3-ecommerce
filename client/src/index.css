@@ -184,11 +184,13 @@ input:focus {
 .my-2 {
   margin-top: var(--spacing-two);
   margin-bottom: var(--spacing-two);
+  background-color: tan;
 }
 
 .px-1 {
   padding-right: var(--spacing-one);
   padding-left: var(--spacing-one);
+  background-color: black;
 }
 
 .px-2 {
