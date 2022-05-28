@@ -211,6 +211,7 @@ input:focus {
 .card {
   width: 25%;
   text-align: center;
+  background-color: black;
 }
 
 .Play {
